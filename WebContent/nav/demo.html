@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layui导航菜单列表及Tab选项布局</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="../layui/src/css/layui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--如果连不上网，请载入本地的jquery-->
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">layui 后台界面</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="#">控制台</a></li>
+            <li class="layui-nav-item"><a href="#">系统管理</a></li>
+            <li class="layui-nav-item"><a href="#">在线用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它功能</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="#">邮件管理</a></dd>
+                    <dd><a href="#">消息管理</a></dd>
+                    <dd><a href="#">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="https://image.haha.mx/2018/08/26/middle/2769766_ec964c8590da89ad1bd2a1e55b9dd88a_1535248496.jpg" class="layui-nav-img">
+                    admin
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="#">基本资料</a></dd>
+                    <dd><a href="#">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退出</a></li>
+        </ul>
+    </div>
+
+    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+    <div id="navbr" class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree" lay-filter="navlf">
+                <li class="layui-nav-item ">
+                    <a class="" href="javascript:;">玩家管理<span class="layui-nav-more"></span></a>
+                        <dl class="layui-nav-child">
+                            <dd class="layui-this"><a class="site-tab-active" data-id="8" data-url="playerInfo" data-title="玩家查询">玩家查询</a></dd>
+                            <dd>
+                                <ul>
+                                    <li class="layui-nav-item">
+                                        <a class="" href="javascript:;">玩家行为查询<span class="layui-nav-more"></span></a>
+                                        <dl class="layui-nav-child">
+                                            <dd><a class="site-tab-active" data-id="10" data-url="" data-title="玩家角色登入">玩家角色登入</a></dd>
+                                            <dd><a class="site-tab-active" data-id="11" data-url="" data-title="玩家角色登出">玩家角色登出</a></dd>
+                                            <dd><a class="site-tab-active" data-id="12" data-url="" data-title="金币获取">金币获取</a></dd>
+                                            <dd><a class="site-tab-active" data-id="13" data-url="" data-title="金币消耗">金币消耗</a></dd>
+                                            <dd><a class="site-tab-active" data-id="14" data-url="" data-title="钻石获取">钻石获取</a></dd>
+                                            <dd><a class="site-tab-active" data-id="15" data-url="" data-title="钻石消耗">钻石消耗</a></dd>
+                                            <dd><a class="site-tab-active" data-id="16" data-url="" data-title="道具获取">道具获取</a></dd>
+                                            <dd><a class="site-tab-active" data-id="17" data-url="" data-title="道具消耗">道具消耗</a></dd>
+                                            <dd><a class="site-tab-active" data-id="18" data-url="" data-title="商城购买查询">商城购买查询</a></dd>
+                                            <dd><a class="site-tab-active" data-id="22" data-url="" data-title="玩家角色登入登出">玩家角色登入登出</a></dd>
+                                            <dd><a class="site-tab-active" data-id="23" data-url="" data-title="金币获取消耗">金币获取消耗</a></dd>
+                                            <dd><a class="site-tab-active" data-id="24" data-url="" data-title="钻石获取消耗">钻石获取消耗</a></dd>
+                                            <dd><a class="site-tab-active" data-id="25" data-url="" data-title="道具获取消耗">道具获取消耗</a></dd>
+                                            <dd><a class="site-tab-active" data-id="40" data-url="" data-title="玩家账号登入登出">玩家账号登入登出</a></dd>
+                                            <dd><a class="site-tab-active" data-id="41" data-url="" data-title="玩家账号登入">玩家账号登入</a></dd>
+                                            <dd><a class="site-tab-active" data-id="42" data-url="" data-title="玩家账号登出">玩家账号登出</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">付费管理<span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd class=""><a class="site-tab-active" data-id="19" data-url="payitem" data-title="付费查询">付费查询</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="true">
+            <ul class="layui-tab-title"></ul>
+            <div class="layui-tab-content">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+    </div>
+
+    <script  type="text/javascript" src="../layui/src/layui.js"></script>
+</div>
+</body>
+<script>
+    layui.use('element', function() {
+        var element = layui.element;
+        var $ = layui.jquery;
+    });
+</script>
+</html>
